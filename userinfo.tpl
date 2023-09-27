@@ -49,17 +49,11 @@ $(document).ready(function(){
 				 <div style="font-weight: 500;font-size: 1.1rem;">{Usertitle} <span class="group-icon" data-bs-toggle="tooltip" data-bs-placement="top">{group-icon}</span></div>
 				<div style="font-size: 100%;" class="text-muted">{status}</div>
 			
-			<div style="font-size: 90%;">
-            [rank]Rank: {rank}[/rank]
-                    </div>
+			
                 <div>
-                <img src="{rank_img}" title="{rank}"></img>
-			</div>
-                    <div style="font-size: 90%;">
-                Reason: {rank_descr}
-                  </div>
+             
                     <div  style="font-size: 85%;" class="text-muted"> 
-{next_rank} {twofactor-auth}
+{twofactor-auth}
                         </div>
                [ignore]Ignore User[/ignore]     
             
@@ -191,22 +185,6 @@ $(document).ready(function(){
     			</div>
 
 				<hr>
-
-
-        
-<ul class="list-inline mb-1">
-              <li class="list-inline-item">
-                <div class="com">
-                    <i class="bi bi-plus-square-dotted"></i>
-                        </div>
-              </li>
-<li class="list-inline-item" ><h6>Reaction stats</h6></li>
-          </ul>
-          <div class="line-chart">
-{include file="engine/lazydev/dle_emote_lite/user.php"}
-          </div>
-
-<hr>
 
 
 <ul class="list-inline mb-1">
