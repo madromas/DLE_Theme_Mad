@@ -176,11 +176,6 @@
    </div>
 </div>
 
-<div class="fullstory-width mx-auto mb-4 block" >
-{include file="engine/lazydev/dle_emote_lite/index.php"}
-</div>
-
-<!--
 <div class="mb-3" style="text-align:center;">
 	<p>	<strong>Did you find an error or a dead link?</strong><br>
 Select the problematic fragment with the mouse and press CTRL +ENTER.</p>
@@ -194,7 +189,6 @@ Select the problematic fragment with the mouse and press CTRL +ENTER.</p>
       [next-url]<a class="card-title" href="{next-url}" >Next</a>[/next-url]
    </span><br>
 </div>
--->
 
 <div class="fullstory-width mx-auto px-lg-5 card mb-4">
    <div class="px-5 pt-4 fs-5  font-weight-bold "><b>{comments-num} [declination={comments-num}]comment|s|[/declination]</b></div>
