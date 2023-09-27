@@ -1,0 +1,291 @@
+
+body {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-size: 13px;
+    line-height: 1.4285715;
+	word-spacing: 0.1em;
+    background-color:#ffffff;
+    color:#000;
+    margin:0px;
+    padding: 10px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .7rem;
+    letter-spacing: -0.01em;
+    line-height: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 22px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+a {
+    color: #b8312f;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease 0s, text-decoration 0.2s ease 0s;
+    -moz-transition: color 0.2s ease 0s, text-decoration 0.2s ease 0s;
+    -o-transition: color 0.2s ease 0s, text-decoration 0.2s ease 0s;
+    transition: color 0.2s ease 0s, text-decoration 0.2s ease 0s
+}
+
+a:hover, .fr-view a:focus {
+    color: #d65f5e;
+    text-decoration: underline
+}
+
+a:active, .fr-view a:hover, .fr-view a:focus {
+    outline: 0
+}
+
+hr {
+	border: 0;
+	border-bottom: 2px solid grey;
+	margin: auto;
+	width: 100%;
+}
+p {margin: 0; padding: 0;}
+
+img {padding: 5px;}
+
+td {
+    font-family: Verdana;
+    word-spacing: 0.1em;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    font-size: 11px;
+}
+
+code,
+pre {
+	color: black;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre::-moz-selection, pre ::-moz-selection,
+code::-moz-selection, code ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre::selection, pre ::selection,
+code::selection, code ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+/* Code blocks */
+pre {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code,
+pre {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: transparent;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+
+.title_quote {
+	padding: .5rem .7rem;
+	border: 1px solid #FF9800;
+	color: #333;
+	background-color: #FFF3E0;
+	border-left-width: 5px;
+	font-weight: 700 !important;
+	border-bottom-color: #FF9800;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24)
+}
+
+blockquote, .quote {
+	padding: .5rem .7rem;
+	border: 1px solid #FF9800;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+	color: #333;
+	background-color: #FFF3E0;
+	border-left-width: 5px;
+}
+
+.quote_block {
+	margin-top: 0;
+    margin-bottom: .7rem;
+}
+
+.title_quote+.quote {
+	border-top-width: 0
+}
+
+p {
+	margin-top: 0;
+    margin-bottom: .7rem;
+}
+
+p:last-child {
+   margin-bottom: 0;
+}
+
+.tablerow {
+	background-color: #BBBBBB;
+}
+
+thead {
+	background-color: #FFBBBB;
+}
+
+tfoot {
+	background-color: #BBBBFF;
+}
+
+th {
+	font:8pt tahoma,arial,sans-serif;
+}
+
+.native-emoji {
+    font-size: 1.4em;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'NotoColorEmoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+.dle_theme_dark {
+    color: rgba(255,255,255,.9);
+    background-color: #282c39;
+}
+.dle_theme_dark a {
+    color: #64B5F6;
+}
+
+img {
+	max-width: 100%;
+}
+
+.mce-content-body figure {
+    margin: 0;
+}
+
+.mce-content-body figure.image figcaption {
+	padding: 1rem;
+    background-color: #fafafa;
+    font-size: .8rem;
+    caption-side: bottom;
+    word-break: break-word;
+    text-align: center;
+}
+
+.mce-content-body figure.image.align-center figcaption {
+	display: table-caption;
+}
