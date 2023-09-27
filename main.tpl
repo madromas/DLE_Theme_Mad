@@ -2,8 +2,6 @@
 "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en" id="h">
    <head>
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1828851643911658"
-     crossorigin="anonymous"></script>
        <!-- Include the plugin CSS file -->
       {headers}
       
@@ -100,10 +98,7 @@
           }
         }
     </script>
-	
-    <!-- Stats for admin panel -->
-	{include file="engine/modules/simple_dle_stats/index.php"}
-	<!-- MadWay.net -->
+
     </body>
 	
 	
