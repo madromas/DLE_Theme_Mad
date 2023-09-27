@@ -1,0 +1,28 @@
+<svg class="emoji__gradients">
+	<defs>
+		<linearGradient id="emote_fill_1" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#00B2FF;"></stop>
+			<stop offset="100%" style="stop-color:#006DEE;"></stop>
+		</linearGradient>
+		<linearGradient id="emote_fill_2" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#FED108;"></stop>
+			<stop offset="100%" style="stop-color:#F7AD00;"></stop>
+		</linearGradient>
+		<linearGradient id="emote_fill_3" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#77E534;"></stop>
+			<stop offset="100%" style="stop-color:#44B839;"></stop>
+		</linearGradient>
+		<linearGradient id="emote_fill_4" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#8740BF;"></stop>
+			<stop offset="100%" style="stop-color:#5351A1;"></stop>
+		</linearGradient>
+		<linearGradient id="emote_fill_5" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#FB852F;"></stop>
+			<stop offset="100%" style="stop-color:#F72F2F;"></stop>
+		</linearGradient>
+		<linearGradient id="emote_fill_6" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#FF0A0A;"></stop>
+			<stop offset="100%" style="stop-color:#C10909;"></stop>
+		</linearGradient>
+	</defs>
+</svg>

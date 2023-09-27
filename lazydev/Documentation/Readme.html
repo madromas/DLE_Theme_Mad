@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>DLE Emote Lite модуль рейтинга эмоциями</title>
+		<link href="./assets/style.css" rel="stylesheet">
+		<link href="./assets/prism.css" rel="stylesheet">
+	</head>
+	<body>
+	
+		<nav class="page-navigation full-topbar">
+            <ul class="navs">
+                <li><a href="#installMod" onclick="goTo('#installMod', this); return false;">Установка</a></li>
+                <li><a href="#includeMod" onclick="goTo('#includeMod', this); return false;">Подключение модуля</a></li>
+				<li><a href="#customMod" onclick="goTo('#customMod', this); return false;">Вывод через Custom</a></li>
+				<li><a href="#tagMod" onclick="goTo('#tagMod', this); return false;">Теги</a></li>
+				<li><a href="#modUpdate" onclick="goTo('#modUpdate', this); return false;">Обновление модуля</a></li>
+            </ul>
+        </nav>
+	
+		<header class="header text-center" style="padding-top: 40px;padding-bottom: 0;">
+			<div class="container-md">
+				<h1>DLE Emote Lite</h1>
+				<p class="lead">Модуль выставления рейтинга эмоциями.</p>
+				<div>
+					<span class="badge badge-primary">version: 1.0.1</span>
+					<span class="badge badge-danger">dle: 13.0 - 14.1</span>
+					<span class="badge badge-secondary">charset: UTF-8</span>
+					<span class="badge btn-info">php: 5.6 - 7.3</span>
+				</div>
+			</div>
+		</header>
+		
+		<section class="section">
+			<div class="container">
+				<header class="section-header" id="installMod">
+					<h2>Установка</h2>
+					<hr>
+					<p class="lead">Установка модуля еще никогда не была такой простой</p>
+				</header>
+				
+				<div class="row" style="margin-top:20px;">
+					<header class="section-header" style="margin: 0 auto;">
+						<span class="title-inner">Установка для <span style="background: #50a1ff;padding: 2px;color: #fff;">DataLife Engine 13.0 и выше</span></span>
+					</header>
+					<ul class="step-text">
+						<li>
+							<h5>Шаг первый</h5>
+							<p>Загрузите файлы с папки <span class="badge badge-danger">Module</span> на свой сервер, предварительно изменив название папки <span class="badge badge-danger">{THEME}</span> на название своего шаблона.</p>
+						</li>
+						<li>
+							<h5>Шаг второй</h5>
+							<p>Установить через систему плагинов XML файл <span class="badge badge-danger">dle-emote-lite.xml</span>.</p>
+						</li>
+						<li>
+							<h5>Шаг третий</h5>
+							<p><a href="#" style="text-decoration:underline;" class="badge badge-primary" onclick="goToElem('#includeMod'); return false;">Прочесть о работе модуля.</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="container">
+				<header class="section-header" id="includeMod">
+					<h2>Подключение модуля</h2>
+					<hr>
+					<p class="lead">Информация о подключении модуля для его работы</p>
+				</header>
+				
+				<input type="radio" id="forFull" name="includeModule" onclick="showAndHide('showFor', '#showForFull');" checked>
+				<label class="dle" for="forFull">Вывод внутри полной новости</label>
+
+				<input type="radio" id="showUser" name="includeModule" onclick="showAndHide('showFor', '#showForUser');">
+				<label class="dle" for="showUser">Вывод на странице пользователя</label>
+				
+				<div class="row" id="showForFull">
+					<header class="section-header" style="margin: 0 auto;">
+						<span class="title-inner">fullstory.tpl</span>
+					</header>
+					
+					<div class="col-md-12">Для вывода в полной новости блока с эмоциями в нужном месте вставить:</div>
+					<div class="col-md-12"><pre><code class="language-markup">{include file="engine/lazydev/dle_emote_lite/index.php"}</code></pre></div>
+				</div>
+				<div class="row" id="showForUser" style="display:none;">
+					<header class="section-header" style="margin: 0 auto;">
+						<span class="title-inner">userinfo.tpl</span>
+					</header>
+					<div class="col-md-12">Для вывода общего количества оценок пользователя внутри его профиля, в нужном месте вставить:</div>
+					<div class="col-md-12"><pre><code class="language-markup">{include file="engine/lazydev/dle_emote_lite/user.php"}</code></pre></div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="container">
+				<header class="section-header" id="customMod">
+					<h2>Вывод новостей через Custom</h2>
+					<hr>
+					<p class="lead">Информация о работе модуля с тегом {custom}</p>
+				</header>
+				
+				<div class="col-md-12">Для сортировки новостей по определенной эмоции используйте параметр <span class="badge badge-primary">order</span>
+					<ul>
+						<li><span class="badge badge-success">emote-one</span> - для сортировки по первой эмоции</li>
+						<li><span class="badge badge-success">emote-two</span> - для сортировки по второй эмоции</li>
+						<li><span class="badge badge-success">emote-three</span> - для сортировки по третьей эмоции</li>
+						<li><span class="badge badge-success">emote-four</span> - для сортировки по четвертой эмоции</li>
+						<li><span class="badge badge-success">emote-five</span> - для сортировки по пятой эмоции</li>
+						<li><span class="badge badge-success">emote-six</span> - для сортировки по шестой эмоции</li>
+					</ul>
+				</div>
+				<div class="col-md-12">Для вывода новостей по эмоциям используйте параметр <span class="badge badge-primary">emote</span>, Пример:<br>
+					<span class="badge badge-danger">emote="one;>;99"</span> - выведет все новости у которых первая эмоция имеет больше 99 голосов<br>
+					Вместо <span class="badge badge-primary">one</span> можно указывать другие эмоции, весь список:
+					<ul>
+						<li><span class="badge badge-success">one</span> - первая эмоция</li>
+						<li><span class="badge badge-success">two</span> - вторая эмоция</li>
+						<li><span class="badge badge-success">three</span> - третья эмоция</li>
+						<li><span class="badge badge-success">four</span> - четвертая эмоция</li>
+						<li><span class="badge badge-success">five</span> - пятая эмоция</li>
+						<li><span class="badge badge-success">six</span> - шестая эмоция</li>
+					</ul>
+					Вместо <span class="badge badge-primary">></span> можно указывать другие значения, весь список:
+					<ul>
+						<li><span class="badge badge-success">></span> - больше указанного количества голосов</li>
+						<li><span class="badge badge-success">>=</span> - больше или равно указанного количества голосов</li>
+						<li><span class="badge badge-success"><</span> - меньше указанного количества голосов</li>
+						<li><span class="badge badge-success"><=</span> - меньше или равно указанного количества голосов</li>
+						<li><span class="badge badge-success">=</span> - равно указанному количеству голосов</li>
+						<li><span class="badge badge-success">!=</span> - не равно указанному количеству голосов</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="container">
+				<header class="section-header" id="tagMod">
+					<h2>Теги шаблона</h2>
+					<hr>
+					<p class="lead">Описание тегов шаблона модуля</p>
+				</header>
+				<input type="radio" id="showFull" name="tplTag" onclick="showAndHide('tpl', '#tplFull');" checked>
+				<label class="dle" for="showFull">rating.tpl</label>
+				<input type="radio" id="forUser" name="tplTag" onclick="showAndHide('tpl', '#tplUser');">
+				<label class="dle" for="forUser">user.tpl</label>
+
+				<div class="row" id="tplFull">
+					<header class="section-header" style="margin: 10px auto 0;">
+						<span class="title-inner"><span style="padding: 2px 4px;">rating.tpl</span></span>
+					</header>
+					<table class="table table-bordered table-striped table-detail">
+						<tbody>
+							<tr>
+								<td><b>Тег</b></td>
+								<td><b>Описание</b></td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-one}</code></pre></td>
+								<td>Выведет количество голосов для первой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-two}</code></pre></td>
+								<td>Выведет количество голосов для второй эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-three}</code></pre></td>
+								<td>Выведет количество голосов для третьей эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-four}</code></pre></td>
+								<td>Выведет количество голосов для четвертой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-five}</code></pre></td>
+								<td>Выведет количество голосов для пятой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-six}</code></pre></td>
+								<td>Выведет количество голосов для шестой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-one] текст [/voted-emote-one]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за первую эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-two] текст [/voted-emote-two]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за вторую эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-three] текст [/voted-emote-three]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за третью эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-four] текст [/voted-emote-four]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за четвертую эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-five] текст [/voted-emote-five]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за пятую эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[voted-emote-six] текст [/voted-emote-six]</code></pre></td>
+								<td>Выведет текст внутри тегов если пользователь который просматривает страницу проголосовал за шестую эмоцию.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-one] текст [/emote-one]</code></pre></td>
+								<td>Выведет текст внутри тегов если у первой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-two] текст [/emote-two]</code></pre></td>
+								<td>Выведет текст внутри тегов если у второй эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-three] текст [/emote-three]</code></pre></td>
+								<td>Выведет текст внутри тегов если у третьей эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-four] текст [/emote-four]</code></pre></td>
+								<td>Выведет текст внутри тегов если у четвертой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-five] текст [/emote-five]</code></pre></td>
+								<td>Выведет текст внутри тегов если у пятой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-six] текст [/emote-six]</code></pre></td>
+								<td>Выведет текст внутри тегов если у шестой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[not-ajax] текст [/not-ajax]</code></pre></td>
+								<td>Не будет выводить текст внутри тегов при выставлении оценки, так как блок меняется при AJAX запросе.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{news-id}</code></pre></td>
+								<td>Выведет ID новости.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="row" id="tplUser" style="display:none;">
+					<header class="section-header" style="margin: 10px auto 0;max-width:100%!important;">
+						<span class="title-inner"><span style="padding: 2px 4px;">user.tpl</span></span>
+					</header>
+					<table class="table table-bordered table-striped table-detail">
+						<tbody>
+							<tr>
+								<td><b>Тег</b></td>
+								<td><b>Описание</b></td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-one}</code></pre></td>
+								<td>Выведет количество голосов для первой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-two}</code></pre></td>
+								<td>Выведет количество голосов для второй эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-three}</code></pre></td>
+								<td>Выведет количество голосов для третьей эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-four}</code></pre></td>
+								<td>Выведет количество голосов для четвертой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-five}</code></pre></td>
+								<td>Выведет количество голосов для пятой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">{emote-vote-six}</code></pre></td>
+								<td>Выведет количество голосов для шестой эмоции.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-one] текст [/emote-one]</code></pre></td>
+								<td>Выведет текст внутри тегов если у первой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-two] текст [/emote-two]</code></pre></td>
+								<td>Выведет текст внутри тегов если у второй эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-three] текст [/emote-three]</code></pre></td>
+								<td>Выведет текст внутри тегов если у третьей эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-four] текст [/emote-four]</code></pre></td>
+								<td>Выведет текст внутри тегов если у четвертой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-five] текст [/emote-five]</code></pre></td>
+								<td>Выведет текст внутри тегов если у пятой эмоции есть голоса.</td>
+							</tr>
+							<tr>
+								<td><pre><code class="language-markup">[emote-six] текст [/emote-six]</code></pre></td>
+								<td>Выведет текст внутри тегов если у шестой эмоции есть голоса.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container" id="modUpdate">
+				<header class="section-header">
+					<h2>Обновление на версию 1.0.1</h2>
+					<hr>
+					<p class="lead">Инструкция по обновлению на новую версию</p>
+				</header>
+				<div class="row">
+					<ul class="step-text">
+						<li>
+							<h5>Шаг первый</h5>
+							<p>Замените все файлы в папке <span class="badge badge-danger">/engine/lazydev/dle_emote_lite/</span>.</p>
+						</li>
+						<li>
+							<h5>Шаг второй</h5>
+							<p>Замените файл <span class="badge badge-danger">/templates/Ваш шаблон/lazydev/dle_emote_lite/assets/dle_emote_js.js</span>.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-items-center">
+
+					<div class="col-md-9">
+						<div class="nav justify-content-center justify-content-md-start">
+							
+						</div>
+					</div>
+
+					<div class="col-md-3 text-center text-md-right">
+						<a href="https://lazydev.pro/">© LazyDev</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="./assets/jquery.min.js"></script>
+		<script>		
+		let showAndHide = function(hide, show) {
+			$('[id*='+hide+']').hide();
+			$(show).show();
+		}
+		let goToElem = function(el) {
+			$('html,body').animate({
+				scrollTop: $(el).offset().top - 40
+			}, 600);
+		}
+		let goTo = function(el, c) {
+            $('.navs > li').removeClass('active');
+            $(c).parent().addClass('active');
+            $('html,body').animate({
+                scrollTop: $(el).offset().top - 40
+            }, 600);
+        }
+		</script>
+		<script src="./assets/prism.js"></script>
+	</body>
+</html>
