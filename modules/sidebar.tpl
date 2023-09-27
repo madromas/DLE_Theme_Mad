@@ -122,12 +122,6 @@
    </div>  
     [/not-available]
     
-   [available=main]
-<div class="card  bg-white mt-3 h-100">
-    {include file="engine/modules/lightstat.php"}
-    </div>
-[/available] 
-    
     [banner_side]
 {banner_side}
 [/banner_side]
